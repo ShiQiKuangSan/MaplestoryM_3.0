@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Ui", "1.Ui", "{AA63D79E-E69F-48C6-B034-CA3AB8460CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaplestoryM_3", "Ui\MaplestoryM_3.csproj", "{425E1532-B771-48CB-B6FF-57CC4E08B925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Module", "2.Module", "{CE505D88-03C6-4DAA-B665-13F7D3C09972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TblLib", "Module\TblLib\TblLib.csproj", "{D2A83CB4-B90C-44BA-8B68-27EBA1995639}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{425E1532-B771-48CB-B6FF-57CC4E08B925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425E1532-B771-48CB-B6FF-57CC4E08B925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425E1532-B771-48CB-B6FF-57CC4E08B925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425E1532-B771-48CB-B6FF-57CC4E08B925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A83CB4-B90C-44BA-8B68-27EBA1995639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A83CB4-B90C-44BA-8B68-27EBA1995639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A83CB4-B90C-44BA-8B68-27EBA1995639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A83CB4-B90C-44BA-8B68-27EBA1995639}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{425E1532-B771-48CB-B6FF-57CC4E08B925} = {AA63D79E-E69F-48C6-B034-CA3AB8460CB7}
+		{D2A83CB4-B90C-44BA-8B68-27EBA1995639} = {CE505D88-03C6-4DAA-B665-13F7D3C09972}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFEFD82C-C949-4224-ABF1-9B1EEA1F5C8B}
+	EndGlobalSection
+EndGlobal
