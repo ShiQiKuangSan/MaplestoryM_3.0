@@ -76,7 +76,7 @@ namespace TblLib
                     continue;
                 }
 
-                var info = items.FirstOrDefault(x => x.Key == key);
+                var info = items.FirstOrDefault(x => x.Key == key && x.Transform.Length > 0);
 
                 if (info == null)
                 {
@@ -94,30 +94,35 @@ namespace TblLib
                     continue;
                 }
 
-                var tranBytes = Encoding.UTF8.GetBytes(info.Transform);
-
-                if (tranBytes.Length > valuesBytes.Length)
+                if (info.Transform.Length > 0)
                 {
-                    //翻译后的字节数大于韩文字节数，跳过
-                    FileBytes.AddRange(valuesBytes);
-                    GetNextPosition(FileBytes);
-                    continue;
-                }
+                    var tranBytes = Encoding.UTF8.GetBytes(info.Transform);
 
-                if (tranBytes.Length < valuesBytes.Length)
-                {
-                    var tranList = tranBytes.ToList();
-
-                    while (tranList.Count < valuesBytes.Length)
+                    if (tranBytes.Length > valuesBytes.Length)
                     {
-                        tranList.Add(0);
+                        //翻译后的字节数大于韩文字节数，跳过
+                        FileBytes.AddRange(valuesBytes);
+                        GetNextPosition(FileBytes);
+                        continue;
                     }
 
-                    tranBytes = tranList.ToArray();
+                    if (tranBytes.Length < valuesBytes.Length)
+                    {
+                        var tranList = tranBytes.ToList();
+
+                        while (tranList.Count < valuesBytes.Length)
+                        {
+                            tranList.Add(0);
+                        }
+
+                        tranBytes = tranList.ToArray();
+                    }
+                    FileBytes.AddRange(tranBytes);
                 }
-
-
-                FileBytes.AddRange(tranBytes);
+                else
+                {
+                    FileBytes.AddRange(valuesBytes);
+                }
 
                 GetNextPosition(FileBytes);
 
