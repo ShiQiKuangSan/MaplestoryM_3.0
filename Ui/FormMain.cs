@@ -236,7 +236,7 @@ namespace MaplestoryM_3
 
             try
             {
-                formSearch.ShowDialog(this);
+                formSearch.Show();
                 uiHelper.init(this, ModelManager.Instance.Items);
                 uiHelper.InitData(sdgv_items, GetPage, pageIndex);
             }
